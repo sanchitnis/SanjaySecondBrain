@@ -1,0 +1,26 @@
+# Skill: wiki-status
+
+## Description
+Analyze the vault's current state, including health metrics, ingestion history, and structural insights.
+
+## Trigger Phrases
+- "wiki status"
+- "show vault health"
+- "what's been recently ingested"
+- "show me orphan pages"
+
+## Instructions
+
+1. **Basic Stats**:
+   - Count files in `entities/`, `projects/`, `concepts/`, `references/`.
+   - Read the last 10 entries in `log.md`.
+2. **Connectivity Audit**:
+   - Identify "orphan pages" (pages with no incoming or outgoing wikilinks).
+   - Identify "hubs" (pages with > 10 incoming links).
+3. **Pending Actions**:
+   - List files in `_raw/` that are waiting for ingestion.
+4. **Taxonomy Health**:
+   - Check if tags on recent pages match the `_meta/taxonomy.md`.
+5. **Synthesis**:
+   - Present a summary table.
+   - Highlight the "Delta since last check" if possible by comparing with the previous `log.md` entry.

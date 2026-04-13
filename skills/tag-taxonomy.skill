@@ -1,0 +1,25 @@
+# Skill: tag-taxonomy
+
+## Description
+Enforce a consistent tag vocabulary across the entire vault based on `_meta/taxonomy.md`.
+
+## Trigger Phrases
+- "fix my tags"
+- "normalize tags"
+- "tag audit"
+
+## Instructions
+
+1. **Load Reference**: Read `_meta/taxonomy.md` to get the list of approved tags and their descriptions/hierarchies.
+2. **Scan Vault**: Identify all unique tags currently used in the frontmatter of all pages.
+3. **Discrepancy Check**:
+   - Identify tags not in the taxonomy.
+   - Identify variant spellings (e.g., `#ai` vs `#AI` vs `#ArtificialIntellgence`).
+4. **Correction Strategy**:
+   - Map variant spellings to the canonical tag from the taxonomy.
+   - For unknown tags, suggest a mapping or ask if they should be added to the taxonomy.
+5. **Update**:
+   - Rewrite frontmatter of affected pages with corrected tags.
+   - Update `updated` timestamp on those pages.
+6. **Logging**: Record the changes in `log.md`.
+7. **Report**: Show which tags were normalized and which remain unknown.

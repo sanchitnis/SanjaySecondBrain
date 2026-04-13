@@ -1,0 +1,30 @@
+# Skill: wiki-ingest
+
+## Description
+Distill raw source material (Markdown, PDFs, transcripts, images) into structured Obsidian wiki pages.
+
+## Trigger Phrases
+- "ingest this document"
+- "add these notes to my wiki"
+- "process this PDF"
+- "distill this transcript"
+
+## Instructions
+
+1. **Source Identification**: Read the provided source file or directory.
+2. **Delta Check**: Consult `.manifest.json`. Skip files that haven't changed since the last ingestion (based on hash or timestamp).
+3. **Extraction**:
+   - identify key **entities**, **concepts**, and **projects**.
+   - Extract claims, decisions, and patterns.
+   - Summarize the content into a 1-2 sentence `summary` for frontmatter.
+4. **Targeting**:
+   - Determine if a page already exists for these concepts.
+   - Use `grep_search` to find related pages and titles.
+5. **Merging/Creating**:
+   - **New Page**: Create using the template (title, category, tags, sources, summary).
+   - **Exist Page**: Merge new knowledge, update the `sources` field, and refresh the `updated` timestamp.
+   - Use `[[wikilinks]]` for any mentioned entities or concepts.
+6. **Provenance**: Tag inferred content with `^[inferred]` if the source is ambiguous.
+7. **Cleanup**: If the source was in `_raw/`, delete it after successful ingestion.
+8. **Logging**: Update `.manifest.json` with the new file states and record the action in `log.md`.
+9. **Report**: Summarize how many pages were created, modified, or skipped.

@@ -1,0 +1,34 @@
+# Skill: wiki-setup
+
+## Description
+Initialize or repair the Obsidian vault structure for this Second Brain. Creates necessary directories and core files if they are missing.
+
+## Trigger Phrases
+- "set up my wiki"
+- "initialize vault"
+- "repair wiki structure"
+- "create wiki folders"
+
+## Instructions
+
+1. **Verify Root**: Ensure you are in the vault root (`d:\Github\SanjaySecondBrain`).
+2. **Create Directories**: Ensure the following directories exist:
+   - `_meta/`: For taxonomy and schemas.
+   - `_archives/`: For timestamped snapshots.
+   - `_raw/`: Staging area for unprocessed captures.
+   - `entities/`: For people, organizations, and specific actors.
+   - `projects/`: For active or past initiatives.
+   - `concepts/`: For abstract ideas, patterns, and mental models.
+   - `references/`: For paper summaries, book notes, and external links.
+   - `synthesis/`: For high-level cross-domain reports.
+   - `journal/`: For logs and periodic reviews.
+
+3. **Initialize Core Files**:
+   - `index.md`: If missing, create with a header `# Second Brain Index` and placeholders for categories.
+   - `log.md`: If missing, create with a header `# Wiki Operations Log`.
+   - `.manifest.json`: If missing, initialize as `{ "sources": {}, "pages": {} }`.
+   - `_meta/taxonomy.md`: If missing, create a basic structure for tags.
+
+4. **Update Log**: Add an entry to `log.md` with the timestamp and action `WIKI_SETUP`.
+
+5. **Report**: Tell the user which folders/files were created and which already existed.

@@ -1,0 +1,27 @@
+# Skill: wiki-query
+
+## Description
+Search the wiki and synthesize an answer to user questions with full citations from your vault.
+
+## Trigger Phrases
+- "what do I know about..."
+- "find information on..."
+- "search my second brain for..."
+- "query wiki: [question]"
+
+## Instructions
+
+1. **Search Phase**:
+   - Use `grep_search` to find relevant terms in page titles and content.
+   - Consult `index.md` for a high-level overview of where topics might live.
+2. **Retrieval Phase**:
+   - Read the most relevant pages (prioritize those with more links or higher confidence).
+   - If the vault is large, read summaries first to filter targets.
+3. **Synthesis**:
+   - Answer the question based *only* on the wiki content.
+   - If information is missing, state it clearly.
+   - Tag any inferred conclusions with `^[inferred]`.
+4. **Citations**:
+   - Use `[[wikilinks]]` to cite every page used in the answer.
+5. **Insights**:
+   - If the user asks for "surprising connections" or "insights", focus on shared tags across disparate categories (e.g., a mental model from `concepts/` applied to a task in `projects/`).

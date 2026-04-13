@@ -1,0 +1,27 @@
+# Skill: wiki-update
+
+## Description
+Sync and distill knowledge from the current project directory into the central Obsidian vault. Perfect for capturing architecture decisions, patterns, and trade-offs.
+
+## Trigger Phrases
+- "update wiki from project"
+- "save project insights to wiki"
+- "sync this project to my second brain"
+
+## Instructions
+
+1. **Context Check**: identify the current project name and its path.
+2. **Delta Analysis**: 
+   - Check `git log` or file timestamps to see what was recently added/changed in the project.
+   - Look for architecture documents, READMEs, or decision logs (ADRs).
+3. **Distillation**:
+   - Extract the *essential* knowledge (trade-offs, patterns, core concepts). 
+   - DO NOT copy the whole codebase. Focus on "the stuff you would forget in 3 months".
+4. **Vault Target**:
+   - Destination should be `projects/[project-name]/` within the vault.
+   - Cross-link to global `concepts/` or `entities/` if applicable.
+5. **Merge Strategy**:
+   - If the project already has a page in the vault, update it with new insights.
+   - Tag the source specifically as the current project path.
+6. **Logging**: Update `log.md` and `.manifest.json`.
+7. **Report**: Summarize the insights distilled and where they were saved.

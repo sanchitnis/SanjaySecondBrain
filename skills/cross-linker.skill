@@ -1,0 +1,28 @@
+# Skill: cross-linker
+
+## Description
+Scan the vault for unlinked mentions and automatically insert `[[wikilinks]]` to weave pages into the knowledge graph.
+
+## Trigger Phrases
+- "link my pages"
+- "cross-reference my vault"
+- "fix missing links"
+
+## Instructions
+
+1. **Registry Pass**:
+   - Collect all valid wikilink targets (filenames and aliases) from the vault.
+   - Ignore directories like `_archives/` or `.obsidian/`.
+2. **Scan Pass**:
+   - For each page, search for distinct mentions of registry targets in the body text.
+   - Match case-insensitively but respect boundaries (don't link "the" if you have a page titled "the").
+3. **Linking Rules**:
+   - Only link the **first** natural mention of a term in a page.
+   - Use `[[path/to/target|display text]]` syntax when needed.
+   - Do not link inside code blocks or frontmatter.
+   - Do not link to the page itself.
+4. **Related Pass**:
+   - If no inline link is possible but the page is semantically related (shared tags/projects), append a `## Related` section.
+5. **Execution**:
+   - Apply changes only when confidence is high (EXTRACTED/INFERRED).
+6. **Logging**: Record the number of links added and pages scanned in `log.md`.
