@@ -1,4 +1,42 @@
 {
-  "sources": {},
-  "pages": {}
+  "sources": {
+    "Manish Gupta LnT Finance Raise 25 video.md": {
+      "ingested": "2026-04-15T10:58:00Z",
+      "pages": [
+        "references/ManishGupta-Raise25.md",
+        "concepts/InclusiveAI.md",
+        "concepts/AI-for-Science.md",
+        "projects/REVAAI/REVAAI.md"
+      ]
+    }
+  },
+  "pages": {
+    "references/ManishGupta-Raise25.md": {
+      "updated": "2026-04-15"
+    },
+    "concepts/InclusiveAI.md": {
+      "updated": "2026-04-15"
+    },
+    "concepts/AI-for-Science.md": {
+      "updated": "2026-04-15"
+    },
+    "projects/REVAAI/REVAAI.md": {
+      "updated": "2026-04-15"
+    },
+    "projects/REVAAI/ScientificAI.md": {
+      "updated": "2026-04-15"
+    },
+    "projects/REVAAI/IndicLinguisticInclusion.md": {
+      "updated": "2026-04-15"
+    },
+    "projects/REVAAI/ElasticAI.md": {
+      "updated": "2026-04-15"
+    },
+    "projects/REVAAI/AgenticFuture.md": {
+      "updated": "2026-04-15"
+    },
+    "projects/REVAAI/SocialImpactSolutions.md": {
+      "updated": "2026-04-15"
+    }
+  }
 }
